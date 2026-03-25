@@ -141,6 +141,10 @@ def single_race(env, agents, names, scores):
             if i==6 and steps==200:
                 # l'affichage de la position de l'agent 7 sur l'écran pendant exactement 200 pas de temps
                 print(f"Team {i+1} avance sur l'écran pendant exactement 200 pas de temps !")
+                #on réinitialise la position de l'agent 7 pour qu'il repart de la ligne de départ
+                kart[i].set_position(0, 0, 0)
+                #on remet à 0 le compteur de pas de temps pour l'agent 7 
+                steps=0
             if kart.has_finished_race and not agents[i].isEnd:
                 print(f"{names[i]} has finished race !")
                 nb_finished += 1
