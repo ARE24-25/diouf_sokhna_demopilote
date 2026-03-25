@@ -140,8 +140,14 @@ def single_race(env, agents, names, scores):
             #i=0 permet par i+1 d'acceder à l'agent 1 et steps==MAX_STEPS//2 permet de vérifier que l'agent 1 a avancé pendant exactement la moitié de pas de temps totam
             if i==0 and steps==MAX_STEPS//2:
                 print(f"Team {i+1} effectue un demi-tour sur la ligne de departdiouf-Sokhna_oumou!")
-
-
+                #on active la marche arrière pour que l'agent 1 recule aprés exactement la moitié de pas de temps totam
+                kart.acceleration = -1.0
+                kart.rescue_kart = True
+                #on décrémente le compteur de pas de temps pour que l'agent 1 recule pendant exactement la moitié de pas de temps totam
+                for j in range(MAX_STEPS//2):
+                    #o n met à jour le monde pour que l'agent 1 recule pendant exactement la moitié de pas de temps totam
+                    env.world_update()
+                    steps=steps-1
             if kart.has_finished_race and not agents[i].isEnd:
                 print(f"{names[i]} has finished race !")
                 nb_finished += 1
