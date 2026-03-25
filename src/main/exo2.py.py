@@ -140,7 +140,7 @@ def single_race(env, agents, names, scores):
             # on pose la condition que i=6 pour trouver l'agent 7 et verifier qu'il avance pendant exactement 200 pas de temps
             if i==6 and steps==200:
                 # l'affichage de la position de l'agent 7 sur l'écran pendant exactement 200 pas de temps
-                print(f"Team {i+1} avance sur l'écran pendant exactement 200 pas de temps !")
+                print(f"Team {i+1} avance sur l'écran pendant exactement 200 pas de temps diouf-Sokhna_oumou!")
                 #on réinitialise la position de l'agent 7 pour qu'il repart de la ligne de départ
                 kart[i].set_position(0, 0, 0)
                 #on remet à 0 le compteur de pas de temps pour l'agent 7 
