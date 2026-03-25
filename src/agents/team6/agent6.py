@@ -12,7 +12,7 @@ class Agent6(KartAgent):
         self.agent_positions = []
         self.obs = None
         self.isEnd = False
-        self.name = "Team6" # replace with your chosen name
+        self.name = "l'agent6" # on met le nom agent6pour etre conforme à la consigne du projet
 
     def reset(self):
         self.obs, _ = self.env.reset()
