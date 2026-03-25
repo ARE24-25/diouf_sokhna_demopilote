@@ -137,6 +137,11 @@ def single_race(env, agents, names, scores):
 
             # check if agents have finished the race
             kart = env.world.karts[i]
+            #i=0 permet par i+1 d'acceder à l'agent 1 et steps==MAX_STEPS//2 permet de vérifier que l'agent 1 a avancé pendant exactement la moitié de pas de temps totam
+            if i==0 and steps==MAX_STEPS//2:
+                print(f"Team {i+1} effectue un demi-tour sur la ligne de departdiouf-Sokhna_oumou!")
+
+
             if kart.has_finished_race and not agents[i].isEnd:
                 print(f"{names[i]} has finished race !")
                 nb_finished += 1
