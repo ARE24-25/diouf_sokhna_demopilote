@@ -139,7 +139,7 @@ def single_race(env, agents, names, scores):
             kart = env.world.karts[i]
             # on pose la condition que i=6 pour trouver l'agent 7 et verifier qu'il avance pendant exactement 200 pas de temps
             if i==6 and steps==200:
-                #l'affichage de la position de l'agent 7 sur l'écran pendant exactement 200 pas de temps
+                # l'affichage de la position de l'agent 7 sur l'écran pendant exactement 200 pas de temps
                 print(f"Team {i+1} avance sur l'écran pendant exactement 200 pas de temps !")
             if kart.has_finished_race and not agents[i].isEnd:
                 print(f"{names[i]} has finished race !")
